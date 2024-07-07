@@ -1,0 +1,11 @@
+<%- include('partials/header.ejs') %>
+    <% if (flag === true) { %>
+        <div class="form-title">Edited!</div>
+    <% } else { %>
+        <div class="form-title">Posted!</div>
+    <% } %>
+    <div class="buttons">
+        <a href='/create'><button type="button">Create another post</button></a>
+        <a href='/'><button type="button">Show all posts</button></a>
+    </div>
+<%- include('partials/footer.ejs') %>

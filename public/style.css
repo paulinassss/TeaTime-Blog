@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Yeseva+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+    
+}   
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 150px;
+    min-height: 100vh;
+    background-color: #746767;
+    color: #FFE5AD;
+    background-color: rgb(5, 5, 5);
+}
+
+/* ----------- Header styles ------------- */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #17030D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-family: "Yeseva One", sans-serif;
+    font-size: 32px;
+    color: #F11A7B;
+    text-decoration: none;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 20px;
+    color: #FFE5AD;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scale(0);
+    background-color: #FFE5AD;
+    transition: transform ease-out .3s;
+}
+
+.navbar a:hover::before {
+    transform: scale(1);
+}
+
+/* ------------- Form styles ------------------------- */
+
+
+.form-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 30px;
+    display:block;
+}
+
+.form-title {
+    position: sticky;
+    top:  88px;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(5, 5, 5, 0.75);
+    font-size: 5rem;
+    text-align: center;
+    text-shadow: 3px 3px 5px #F11A7B;
+    z-index: 50;
+}
+.form-container .input-box {
+    margin-bottom: 50px;
+}
+
+.form-container .input-box .details {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.form-container .input-box input {
+    width: 100%;
+    height: 3rem;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid #FFE5AD; 
+    background-color: #3e001f4d;
+    color: white;
+}
+
+.form-container textarea {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid #FFE5AD; 
+    background-color: #3e001f4d;
+    color: white;
+}
+
+::placeholder {
+    color: #664a57;;
+    opacity: 1; /* Firefox */
+}
+
+.submit-btn {
+    padding: auto 30px;
+    text-align: center;
+}
+
+.submit-btn .btn {
+    height: 50px;
+    width: 150px;
+    background-color: #FFE5AD;
+    font-size: 1.5rem;
+    transition: 0.4s;
+}
+
+.submit-btn .btn:hover {
+    color: #FFE5AD;
+    background-color: transparent;
+    border: 1px solid #FFE5AD;
+}
+
+/* -------------- Home page styles ----------- */
+
+.posts-container {
+    display: grid;
+    min-width: 600px;
+    max-width: 1500px;
+    margin-top: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 200px;
+    gap: 40px;
+}
+
+.postCard h2 {
+    color: #F11A7B;
+}
+
+.postCard {
+    position: relative;
+    background-color: #3e001fae;
+    border: 1px solid #98217686;
+    padding: 15px;
+    box-shadow: #982176c6 15px 15px 20px;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.editDelete {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.editDelete button {
+    padding: 5px;
+    margin: 0 5px;
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #FFE5AD;
+    font-size: 1rem;
+    transition: 0.4s;
+}
+
+.buttons button {
+    height: 60px;
+    width: 300px;
+    padding: 10px;
+    margin: 20px 5px;
+    border-radius: 5px;
+    background-color: #FFE5AD;
+    font-size: 1.5rem;
+    transition: 0.4s;
+}
+
+.editDelete button:hover, .buttons button:hover {
+    background-color: transparent;
+    color: #FFE5AD;
+    border: 1px solid #FFE5AD;
+}
+
+/* -------------------------------------- */
+
+button {
+    cursor: pointer;
+}

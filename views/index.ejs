@@ -1,0 +1,33 @@
+<%- include('partials/header.ejs') %>
+
+
+<% if (locals.posts) { %>
+        <div class="form-title">Thirsty?</div>
+                <div class="posts-container">
+                    <% for  (post of posts) {  %>
+                        <div class="postCard">
+                            <h2 name="title"><%= post.title %></h2>
+                            <% if (post.content.length > 150) { %>
+                                <div name="content"><%= post.content.slice(0, 151) + " . . ." %></div>
+                            <% } else { %>
+                                <div name="content"><%= post.content %></div>
+                            <% } %>
+                            <div class="editDelete">
+                                <form action="/edit" method="post">
+                                    <input type="hidden" id="title" name="title" value="<%= post.title %>">
+                                    <input type="hidden" id="content" name="content" value="<%= post.content %>">
+                                    <button type="submit">Edit</button>
+                                </form>
+                                <form action="/delete" method="post">
+                                    <input type="hidden" id="title" name="title" value="<%= post.title %>">
+                                    <input type="hidden" id="content" name="content" value="<%= post.content %>">
+                                    <button type="submit">Delete</button> 
+                                </form>
+                            </div>
+                        </div>
+                    <% } %> 
+                </div> 
+<% } else { %>
+        <h1 class="form-title">No posts...</h1>
+<% } %>
+<%- include('partials/footer.ejs') %>
